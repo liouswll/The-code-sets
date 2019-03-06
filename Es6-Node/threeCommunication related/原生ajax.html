@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      window.onload=function(){
+        let obtn =document.getElementById('btn');
+        obtn.onclick=function(){
+          if(window.XMLHttpRequest){
+            var xhr = new XMLHttpRequest();
+          }else{
+            var xhr = new ActiveXObject('Microsoft.XMLHTTP');
+          }
+          //xhr.open("GET",'1.php?a=12&b=5',true);
+          xhr.open("GET",'1.php?a=12&b=5',true);
+          xhr.send();
+          xhr.onreadystatechange = function(){
+            if(xhr.readyState==4){
+              if(xhr.status>=200 && xhr.status<300 ||xhr.status ==304){
+                console.log(xhr);
+                alert(xhr.responseText);
+              }else{
+                alert('请求失败');
+              }
+            }
+          };
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <input type="button" id="btn" value="按钮">
+  </body>
+</html>

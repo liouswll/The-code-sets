@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meat charset="utf-8">
+		<title></title>
+		<script src="jquery.js" charset="utf-8"></script>
+		<script>
+			/*function *show(){
+					alert(1);
+					yield;
+					alert(2);
+				}
+				let gen=show();
+				gen.next();
+				setTimeout(function(){
+					gen.next();
+				},5000);*/
+
+
+			/*function *show(){
+				alert(1);
+				let a = yield;
+				alert(2+a);
+			};
+			let gen = show();
+
+			gen.next();
+			gen.next(12);*/
+
+
+			function *show(){
+				alert(1);
+				let c = yield 55;
+				alert(2+c);
+				return 5;
+			};
+			let p = show();
+			let a= p.next(); console.log(a);
+			let b= p.next(7); console.log(b);	
+
+
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

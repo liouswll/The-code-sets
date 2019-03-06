@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meat charset="utf-8"></meat>
+		<title></title>
+		<script>
+			let arr=[2,5,6,8,3,47,66,46];
+			let arr2 =arr.reduce((f,item,index)=>{
+				console.log(f,item,index);
+				return f+item;
+			});
+			alert(arr2);
+
+
+			let arr3 = [51,52,53,54,55];
+			console.log(arr3.length);
+			let arr4 = arr3.reduce((g,item,index)=>{
+				console.log(index);
+				if(index<arr3.length-1){
+					return g+item;
+				}else{
+					return (g+item)/arr.length;
+				};
+			});
+			alert(arr4);
+		</script>
+	<head>
+	<body>
+	</body>
+</html>

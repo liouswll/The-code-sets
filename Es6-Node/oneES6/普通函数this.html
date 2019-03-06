@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meat charset="utf-8"></meat>
+		<title></title>
+		<script>
+			document.onclick=function(){
+
+				let a=function(){
+					alert(this);
+				};
+				let obtn =document.getElementById("btn1");
+				obtn.onclick = a.bind(12);
+			};
+
+
+		</script>
+	<head>
+	<body>
+		<input type="button" value="aaa" id="btn1" />
+	</body>
+</html>

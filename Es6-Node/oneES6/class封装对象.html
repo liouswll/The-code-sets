@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meat charset="utf-8"></meat>
+		<title></title>
+		<script>
+			class Person{
+				constructor(name,age){
+					this.name=name;
+					this.age=age;
+				};
+				showName(){
+					alert('name:'+this.name);
+				};
+				showAge(){
+					alert('age:'+this.age);
+				};
+			};
+			class pro extends Person{
+				constructor(name,age,job){
+					super(name,age);
+					this.job=job;
+				};
+				showJob(){
+					alert('job:'+this.job);
+				};
+			};
+
+
+			let p =new pro('liousd',22,'hgt');
+			p.showName();
+			p.showAge();
+			p.showJob();
+		</script>
+	<head>
+	<body>
+	</body>
+</html>

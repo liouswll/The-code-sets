@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meat charset="utf-8"></meat>
+		<title></title>
+		<script>
+			/*let arr = [1,2,3];
+			arr.a=()=>{
+				alert(this);
+			}
+			arr.a();
+
+
+
+			document.onclick=()=>{
+				let arr1 = [1,2,3]1,;
+				arr1.a=()=>{
+					alert(this);
+				};
+				arr1.a();
+			};*/
+
+
+			document.onclick=function(){
+
+				let a=()=>{
+					alert(this);
+				};
+				let obtn =document.getElementById("btn1");
+				obtn.onclick = a.bind(12);
+			};
+
+
+		</script>
+	<head>
+	<body>
+		<input type="button" value="aaa" id="btn1" />
+	</body>
+</html>

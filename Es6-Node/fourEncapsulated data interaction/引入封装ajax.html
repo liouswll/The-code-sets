@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <script src="js/ajax.js" charset="utf-8"></script>
+  <script type="text/javascript">
+    window.onload=function(){
+      let oBtn = document.getElementById("btn");
+      oBtn.onclick=function(){
+        /*ajax("GET","2.php",{a:12,b:5},function(str){
+          alert(str);
+          console.log(str);
+        },function(){
+          alert('失败');
+        });*/
+        ajax({
+          url:'2.php',
+          type: 'GET',
+          dataType: 'json',
+          data:{a:44,b:45},
+          success(str){
+            alert(str);
+          },error(){
+            alert('失败');
+          }
+        });
+      }
+    }
+  </script>
+  <body>
+    <input type="button" name="" value="按钮" id="btn">
+  </body>
+</html>

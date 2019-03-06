@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      (async ()=>{
+        let count = await $.ajax({url:'1.txt',dataType:'json'});
+        if(count.a+count.b<10){
+          let coun =await $.ajax({url:'2.txt',dataType:'json'});
+          alert(coun[0]);
+        }else{
+          let cou =await $.ajax({url:'3.txt',dataType:'json'});
+          alert(cou.name)
+        }
+      })();
+    </script>
+  </head>
+  <body>
+
+  </body>
+</html>

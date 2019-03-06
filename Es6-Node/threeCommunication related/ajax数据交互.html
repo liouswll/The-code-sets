@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="jquery.js" charset="utf-8"></script>
+    <script type="text/javascript">
+      $(function(){
+        $('#btn').click(function(){
+          $.ajax({
+            url:'1.php',
+            data:{'a':2,'b':3},
+            type:'GET',
+            dataType:'text',
+            success(str){
+              alert(str)
+            },
+            error(){
+              alert('错误')
+            }
+          })
+        })
+      })
+    </script>
+  </head>
+  <body>
+    <input type="button" id="btn" value="按钮">
+  </body>
+</html>

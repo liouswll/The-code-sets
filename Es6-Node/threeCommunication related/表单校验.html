@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script type="text/javascript">
+      const $ = function(...args){
+        return document.querySelectorAll(...args);
+      };
+
+      /*const $ = document.querySelectorAll.bind(document);*/
+
+      window.onload=function(){
+        /*let oForm=document.getElementById('formOne')[0];*/
+
+        let oForm = $('#formOne')[0];
+        let oName=document.getElementsByName('a')[0];
+        oForm.onsubmit=function(){
+          if(oName.value ==''){
+            alert('用户名不能 为空')；
+            return false;
+          }
+        };
+      };
+    </script>
+  </head>
+  <body>
+    <form  action="http://localhost/1.php" method="get" id="formOne">
+      用户名:<input type="text"  name="a">
+      密码:<input type="password" name="b" value="">
+      <input type="submit" name="" value="提交">
+    </form>
+  </body>
+</html>

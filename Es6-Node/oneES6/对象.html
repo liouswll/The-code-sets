@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meat charset="utf-8"></meat>
+		<title></title>
+		<script>
+		function pro(name,age){
+			this.name=name;
+			this.age=age;
+		};
+		pro.prototype.showname=function(){
+			alert('name:'+this.name);
+		};
+		pro.prototype.showage=function(){
+			alert("age:"+this.age);
+		};
+		/*let p = new pro('lious',22);
+		p.showname();
+		p.showage();*/
+
+
+		//call  use
+		function callup(name,age,job){
+			pro.call(this,name,age);
+			this.job=job;
+		};
+		callup.prototype=new pro();
+		callup.prototype.constructor=callup;
+		callup.prototype.showjob=function(){
+			alert('job:'+this.job);
+		};
+		let op =new callup('lious',22,'lks')
+		op.showname();
+		op.showage();
+		op.showjob();
+		</script>
+	<head>
+	<body>
+	</body>
+</html>

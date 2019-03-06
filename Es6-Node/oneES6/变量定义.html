@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meat charset="utf-8"></meat>
+		<title></title>
+		<script>
+		window.onload=function(){
+			let aBtn  =document.getElementsByTagName("input");
+			for(let i=0;i<aBtn.length;i++){
+				aBtn[i].onclick=()=>{
+					alert(i);
+				};
+			};
+		};
+		</script>
+	<head>
+	<body>
+		<input type="button" value="0"  />
+		<input type="button" value="1"  />
+		<input type="button" value="2"  />
+	</body>
+</html>
