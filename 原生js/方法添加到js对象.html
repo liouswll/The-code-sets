@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function ss(f,l,a,c){
+        this.f=f;
+        this.l=l;
+        this.a=a;
+        this.c=c;
+
+        this.changeName=changeName;
+        function changeName(name){
+            this.l=name;
+        }
+    }
+    m=new ss("a","s",21,"d");
+    m.changeName("g");//改变内容
+    document.write(m.l);
+</script>
+</body>
+</html>

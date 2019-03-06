@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        div{
+            background-color:green;
+            width:100px;
+            height:100px;
+            color:white;
+        }
+    </style>
+</head>
+<body>
+<div onmousedown="dd(this)" onmouseup="ss(this)">
+    请点击这里
+</div>
+<script>
+    function ss(obj){
+        obj.style.backgroundColor="green";
+        obj.innerHTML=55;
+    }
+    function dd(obj){
+        obj.style.backgroundColor="pink";
+        obj.innerHTML=66;
+    }
+</script>
+</body>
+</html>

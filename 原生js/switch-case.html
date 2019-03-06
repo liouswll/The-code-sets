@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button style="button" onclick="ss()">点击</button>
+<button style="button" onclick="ff()">点击</button>
+<p id="aa"></p>
+<p id="bb"></p>
+<script>
+    function ss(){
+         var x;
+         var d =new Date().getDay();
+         switch(d){
+             case 0:
+                 x = 77;
+                 break;
+             case 1:
+                 x = 66;
+                 break;
+             case 2:
+                 x = 55;
+                 break;
+             case 3:
+                 x = 44;
+                 break;
+             case 4:
+                 x = 33;
+                 break;
+             case 5:
+                 x =22;
+                 break;
+             case 6:
+                 x =11;
+                 break;
+         }
+        document.getElementById("aa").innerHTML = x;
+    }
+    function ff(){
+        var x;
+        var d =new Date().getDay();
+        switch(d){
+            case 6:
+                x = 66;
+                break;
+            case 0:
+                x =77;
+                break;
+            default:
+                x = "失败";
+        }
+        document.getElementById("bb").innerHTML = x;
+    }
+</script>
+</body>
+</html>

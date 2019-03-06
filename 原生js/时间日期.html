@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    document.write(Date());
+    var d=new Date();
+    document.write(d.getTime());
+
+
+
+    var a=new Date();
+    a.setFullYear(1992,10,3);
+    document.write(a);
+
+
+    document.write(d.toUTCString()+"<br>");
+
+
+
+
+    // var d=new Date();
+    // var weekday=new Array(7);
+    // weekday[0]="星期日";
+    // weekday[1]="星期一";
+    // weekday[2]="星期二";
+    // weekday[3]="星期三";
+    // weekday[4]="星期四";
+    // weekday[5]="星期五";
+    // weekday[6]="星期六";
+    //
+    // document.write("今天是" + weekday[d.getDay()]);
+
+
+
+    var h=new Date();
+    var w=new Array(7);
+        w[0]=0;
+        w[1]=2;
+        w[2]=3;
+        w[3]=4;
+        w[4]=5;
+        w[5]=6;
+        w[6]=7;
+    document.write(w[h.getDay()]);
+
+</script>
+</body>
+</html>

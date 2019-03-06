@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button style="button" onclick="ss()">点击</button>
+<p id="aa"></p>
+<script>
+    function ss(){
+        var x ="";
+        for(var i=0;i<5;i++){
+            x = x + "the number is "+ i +"<br>";
+        }
+        document.getElementById("aa").innerHTML = x ;
+    }
+
+
+
+    cars = ["a","b","c","d"];
+    for (var i = 0,l = cars.length;i<l;i++){
+        document.write(cars[i]+"<br>");
+    }
+
+
+    cars = ["a","b","c","d"];
+    var i =0 ,l =cars.length;
+    for (;i<l;i++){
+        document.write(cars[i]+"<br>");
+    }
+
+    cars = ["a","b","c","d"];
+    var i =0 ,l =cars.length;
+    for (;i<l;){
+        document.write(cars[i]+"<br>");
+        i++;
+    }
+
+
+
+</script>
+</body>
+</html>

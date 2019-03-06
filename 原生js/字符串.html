@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var txt="hello world!";
+    document.write(txt.length);
+
+
+    //添加样式
+
+    document.write("big:"+txt.big());
+    document.write(txt.small());
+    document.write(txt.strike());
+    document.write(txt.link("http://www.w3school.com.cn")+"<br>");
+
+
+    //indexof
+
+    var str="Hello world!";
+    document.write(str.indexOf("Hello") + "<br />")
+    document.write(str.indexOf("World") + "<br />")
+    document.write(str.indexOf("world"))
+
+
+    //match
+    document.write(str.match("world"));
+    document.write(str.match("World"));
+
+    //replace
+    document.write(str.replace(/or/,"ss"));
+    document.write(str.replace(/d/,"ss"));
+
+
+
+
+
+
+</script>
+</body>
+</html>

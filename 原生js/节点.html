@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div id="aa">
+    <p id="a1">11111</p>
+    <p id="a2">22222</p>
+    <p id="a3">33333</p>
+</div>
+<script>
+    var para=document.createElement("p");
+    var node=document.createTextNode("这是新段落");
+    para.appendChild(node);
+    var element=document.getElementById("aa");
+    element.appendChild(para);
+
+    var c=document.getElementById("aa");
+    var v=document.getElementById("a1");
+    c.removeChild(v);
+
+    var n=document.getElementById("a3");
+    n.parentNode.removeChild(n);
+</script>
+</body>
+</html>

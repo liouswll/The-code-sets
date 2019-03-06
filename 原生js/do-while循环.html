@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<button onclick="myFunction()">点击这里</button>
+<button onclick="ss()">点击这里</button>
+<p id="demo"></p>
+<p id="aa"></p>
+
+<script>
+    function myFunction()
+    {
+        var x="",i=0;
+        do
+        {
+            x=x + "The number is " + i + "<br>";
+            i++;
+        }
+        while (i<5);
+        document.getElementById("demo").innerHTML=x;
+    }
+    function ss(){
+        var x="",i=0;
+        do{
+            x = x+"the number is"+i+"<br>";
+            i++;
+        }while(i<5);
+        document.getElementById("aa").innerHTML=x;
+    }
+</script>
+</body>
+</html>

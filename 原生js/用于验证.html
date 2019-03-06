@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input  id="ss" style="text">
+<button style="button"  onclick="aa()">验证</button>
+<script>
+    function aa (){
+        var x = document.getElementById("ss").value;
+        if( x == "" || isNaN(x)){
+            alert("输入错误");
+        }
+    }
+</script>
+</body>
+</html>
