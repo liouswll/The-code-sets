@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+    <style type="text/css">
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        div{
+            height: 410px;
+            width: 990px;
+            margin: 100px auto;
+            overflow:hidden;
+            position: relative;
+        }
+        div ul{
+            position: absolute;
+        }
+        div ul li{
+            height: 410px;
+        }
+        div ol{
+            position: absolute;
+            left: 450px;
+            bottom: 10px;
+        }
+        div ol li{
+            height: 20px;
+            width: 20px;
+            background-color:white;
+            border: 1px solid #eee;
+            margin-left: 10px;
+            border-radius:50px;
+            float:left;
+            line-height: 20px;
+            text-align: center;
+        }
+        div ol li.active{
+            background-color:#3399FF;
+            color: #fff;
+            border: 2px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" >
+        <ul>
+            <li><img src="1.jpg" alt=""></li>
+            <li><img src="3.jpg" alt=""></li>
+            <li><img src="1.jpg" alt=""></li>
+            <li><img src="6.jpg" alt=""></li>
+            <li><img src="1.jpg" alt=""></li>
+        </ul>
+        <ol >
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+    </div>
+    <div class="box1" >
+        <ul>
+            <li><img src="1.jpg" alt=""></li>
+            <li><img src="3.jpg" alt=""></li>
+            <li><img src="1.jpg" alt=""></li>
+            <li><img src="6.jpg" alt=""></li>
+            <li><img src="1.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+    </div>
+    <div class="box2" >
+        <ul>
+            <li><img src="1.jpg" alt=""></li>
+            <li><img src="3.jpg" alt=""></li>
+            <li><img src="1.jpg" alt=""></li>
+            <li><img src="6.jpg" alt=""></li>
+            <li><img src="1.jpg" alt=""></li>
+        </ul>
+        <ol>
+            <li class="active">1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+        </ol>
+    </div>
+
+    <script src="./carousel.js"></script>
+
+    <script type="text/javascript">
+
+        //使用 new 生成实例:
+        var carousel = new Carousel({
+            container:".box",
+            width:"800",
+            height:"400",
+        });
+        var carousel1 = new Carousel({
+            container:".box1",
+            width:"800",
+            height:"400",
+        });
+        var carousel2 = new Carousel({
+            container:".box2",
+            width:"800",
+            height:"400",
+        });
+
+        //面对对象有三大特点,封装,继承,多态, 这个组件就是利用封装原理,提供了一个构造函数,用来在创建对象时初始化对象. 属性和方法都是属于这个构造函数,通过new出一个对象,也会具有那些属性,也能使用构造函数的方法.
+
+        // window.onload=function(){
+        //     var box=document.getElementById('box'),
+        //         pic=document.getElementById('pic'),
+        //         btn=document.getElementById('btn').getElementsByTagName('li'),
+        //         index=0,
+        //         timer=null;
+        //     // 定义调用自动播放函数
+        //     if(timer){
+        //         clearInterval(timer);
+        //         timer=null;
+        //     }
+        //     timer=setInterval(autoplay,2000);
+        //     // 定义图片切换函数
+        //     function autoplay(){
+        //         index++;
+        //         if(index>=btn.length) {
+        //             index = 0;
+        //         }
+        //         selected(index);
+        //     }
+        //     // 停止自动播放
+        //     box.onmouseover=function(){
+        //         clearInterval(timer);
+        //     };
+        //     // 鼠标离开
+        //     box.onmouseout=function(){
+        //         timer=setInterval(autoplay,1000);
+        //     };
+        //     // 数字导航
+        //     for(var i=0;i<btn.length;i++){
+        //         btn[i].id=i;
+        //         btn[i].onmouseover=function(){
+        //             clearInterval(timer);
+        //             selected(this.id);
+        //         }
+        //     }
+        //     function selected(choseIndex){
+        //         for(var j=0;j<btn.length;j++){
+        //             btn[j].className='';
+        //             pic.style.top=0;
+        //         }
+        //         btn[choseIndex].className='active';
+        //         pic.style.top=+ -choseIndex*410+'px';
+        //         index=choseIndex;
+        //     }
+        // }
+    </script>
+</body>
+</html>
